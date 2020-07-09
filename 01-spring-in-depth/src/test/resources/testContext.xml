@@ -9,5 +9,8 @@
 
 
 	<import resource="classpath:applicationContext.xml"/>
+	
+	
+	<!-- dummy -->
 
 </beans> 
