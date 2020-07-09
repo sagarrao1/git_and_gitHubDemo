@@ -9,5 +9,8 @@
 
 
 	<import resource="classpath:applicationContext.xml"/>
+	
+	
+	<!-- 2nd commit after check out -->
 
 </beans> 
