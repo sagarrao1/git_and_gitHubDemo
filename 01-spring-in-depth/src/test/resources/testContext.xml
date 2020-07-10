@@ -11,6 +11,6 @@
 	<import resource="classpath:applicationContext.xml"/>
 	
 	
-	<!-- dummy -->
+	<!-- 2nd commit after check out -->
 
 </beans> 
