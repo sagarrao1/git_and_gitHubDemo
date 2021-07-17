@@ -542,6 +542,111 @@ git push origin master --tags
 
 
 
+Mastering git by 
+Reverse of git add . Is 
+git rm --cached filename from staged to untracking or modified state then you want to remove file
+git rm filename
+
+How to reset last 2 commits I have 2 commits but I want reset those. Two ways mixed reset and hard reset
+All last 2 commits will be removed from you working area and repository also
+
+git log 
+Commit1 abcdf2
+Commit2 abcdf2
+Commit3 abcdf3
+
+git reset --hard abcdf3 (commit id)   ---- it will move from repo, working area, index
+
+git reset --mixed fc16eb3    ---- it will move from repo and index but not from working are
+
+git status  -- will show untracked or modified file
+
+You created file 
+git add .  --- file will be staged from untracked . But you  don't want hard reset, you want to remove from stage
+git reset HEAD   --- will remove from stage and make it untracked or modified
+git reset --hard HEAD --- will remove from untracked as well
+
+Stash
+git  stash --include-untracked  (inludes un tracked as well to stash best command to use)
+
+git status 
+Now you can move to different branch do your work and comeback
+Now you want get your old files back
+git stash apply
+git status 
+git add.
+git commit -m "comments"
+
+Now you can delete you changes from stash
+git stash clear
+
+
+To add origin to existing git projec
+git add origin <remote_url>
+
+To push new branch to remote
+git push origin firstbranch
+
+To push all branches to remote
+git push origin --all
+
+git show commit_id ( to see particular commit id changes )
+
+Git vs gitgub
+Git is version control system to manage your  source code history and it a distributed environment
+Where you remote repository and local repository. Git is tool installed and maintained in local system
+
+Git hub is web based hosting service for git repositories
+Exclusively cloud based or we can say github is service for the projects that use git
+
+To delete branch in origin
+git push origin --delete old_logic
+
+To rename branch in local
+git branch -m old_branch new_branch 
+git push origin :old_branch new_branch
+
+To push all branches to remote
+git push origin --all
+
+We can checkout any commit and create branch from there
+git log --oneline -10  
+git checkout <commit_id>  (HEAD will be detached from master and pointed here)
+git checkout -b detached_branch
+
+git revert
+
+To see history
+
+git log
+git log --oneline --graph 
+git show <commit_id>
+git show HEAD^  (to see first parent from HEAD)
+git show HEAD^^  (to see 2 parent from HEAD)
+git show HEAD~2^2  (to see 2 parent from HEAD of 2 parent if we have merge commit it may have 2 parents)
+git show HEAD@{"1 month ago"}
+
+git blame menu.text  ( to see history of who has commited what changes)
+git diff HEAD HEAD~2  ( see difference between last commit and 2 commits earlier)
+git diff master sagar_branch  ( see difference between 2 branches)
+
+I want filter commits which has name apple
+git log --grep apple --oneline
+git log --5 --oneline  (last 5 commits)
+git log HEAD~5..HEAD
+
+To find diff between what commits are not there in 2 branches. Branch comparison
+Current I am branch_demo, want to find with master branch. What more commits in master
+git log branch_demo..master --oneline
+
+
+git commit --amend    ( to do as single commit on top of last commit)
+Lets's say you committed something and realized that some more changes to commit but don't want to be as 2 commits , then u use single commit
+git commit --amend
+git log --oneline -5
+git show HEAD
+![image](https://user-images.githubusercontent.com/50944453/126047679-6a9cab9f-8249-4ef5-b2b5-ba0a97b7179e.png)
+
 
 
 
